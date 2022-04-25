@@ -316,9 +316,9 @@
       "connected_well": "You are connected to plenty of peers. All is good! They are propagating your data and you are propagating theirs."
     },
     "recommendations": {
-      "consume_invite": "How to get an invite",
-      "follow_staged_manually": "Follow someone new",
-      "paste_invite": "Paste invite code",
+      "consume_invite": "Hoe je een uitnodiging krijgt",
+      "follow_staged_manually": "Volg iemand nieuw",
+      "paste_invite": "Plak een uitnodigingscode",
       "host_ssb_room": "How to host a room server",
       "others": "Other choices"
     },
