@@ -175,25 +175,25 @@
       },
       "link_failed": {
         "title": "Account niet gereed",
-        "description": "You tried to open an SSB link, but your account is not ready yet. Please complete the setup process first, and then try the link again."
+        "description": "U probeerde een SSB-link te openen, maar uw account is nog niet gereed. Voltooi eerst account setup en probeer daarna de link opnieuw."
       }
     }
   },
   "migrating": {
-    "label": "Migrating..."
+    "label": "Migreren..."
   },
   "central": {
     "app_name": "Manyverse",
     "tab_headers": {
       "public": "Publiek bord",
       "private": "Privé berichten",
-      "activity": "Activity",
-      "connections": "Connected peers"
+      "activity": "Activiteit",
+      "connections": "Verbonden connecties"
     },
     "tab_footers": {
       "public": "Publiek",
       "private": "Privé",
-      "activity": "Activity",
+      "activity": "Activiteit",
       "connections": "Verbindingen"
     },
     "loading": "Laden...",
@@ -222,7 +222,7 @@
       "description": "Schrijf een dagboek dat je\nlater met vrienden kunt delen"
     },
     "search": {
-      "accessibility_label": "Search Button"
+      "accessibility_label": "Zoek Knop"
     }
   },
   "private": {
@@ -255,37 +255,37 @@
       "label": {
         "1_normal": "",
         "2_bold": "{{author}}",
-        "3_normal": " mentioned you"
+        "3_normal": " heeft je vermeld"
       }
     },
     "follow": {
       "label": {
         "1_normal": "",
         "2_bold": "{{author}}",
-        "3_normal": " followed you"
+        "3_normal": " heeft je gevolgd"
       }
     },
     "connection_attempt": {
       "label": {
         "1_normal": "",
         "2_bold": "{{author}}",
-        "3_normal": " wants to connect"
+        "3_normal": " wil verbinding maken"
       }
     },
     "empty": {
-      "title": "No activity",
-      "description": "When people mention or follow you,\nthey show up here"
+      "title": "Geen activiteit",
+      "description": "Wanneer mensen jou noemen of volgen,\nverschijnen ze hier"
     }
   },
   "connections": {
-    "title": "Connections Panel",
+    "title": "Verbinding Paneel",
     "floating_action_button": {
-      "add_connection": "Add a connection",
+      "add_connection": "Een verbinding toevoegen",
       "create_invite": "Maak een uitnodiging",
       "paste_invite": "Plak uitnodiging",
       "bluetooth_seek": "Bluetooth zoeken"
     },
-    "open_connections_panel": "Open Connections Panel",
+    "open_connections_panel": "Open Verbinding Paneel",
     "empty": {
       "offline": {
         "title": "Offline",
@@ -302,12 +302,12 @@
     },
     "scenarios": {
       "offline": "Offline",
-      "not_connected": "Not connected",
-      "few_connections": "Too few connections",
-      "many_connections": "Well connected"
+      "not_connected": "Niet verbonden",
+      "few_connections": "Te weinig verbindingen",
+      "many_connections": "Goed verbonden"
     },
     "scenario_descriptions": {
-      "offline_with_content": "You cannot connect to peers at the moment, but you can enjoy some content that you already have.",
+      "offline_with_content": "Je kunt op dit moment niet verbinden met verbindingen, maar je kunt genieten van de inhoud die je al hebt.",
       "offline_without_content": "You cannot connect to peers at the moment. Try to get some internet connectivity or turn on Wi-Fi to discover peers nearby.",
       "knows_no_one": "Your Manyverse is at the moment isolated. You need to be invited by other peers to join room servers, or you can host a room server yourself.",
       "nearby_strangers_available": "You are not yet connected to anyone, but there are some peers on the same Wi-Fi. Try to connect to them manually if you think they are willing to connect to you too.",
