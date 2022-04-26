@@ -329,20 +329,20 @@
           "not_connected": "Your friends are not online right now, but if you want to get more content, there are some unknown peers currently online in the same room(s) as you are. You can try to become friends with them.",
           "connected": "If you want to get more content beyond what you already have, you can follow more people. There are some unknown peers currently online in the same room(s) as you are. You can try to become friends with them."
         },
-        "part2": "On the next screen, you will see unknown peers displayed like this. Press one of them and choose \"Open Profile\", then \"Follow\"."
+        "part2": "Op het volgende scherm ziet u onbekende peers zoals deze. Druk op een van hen en kies \"Open profiel\", en dan \"Volgen\"."
       }
     },
     "toasts": {
       "invite_accepted": "Uitnodiging geaccepteerd",
       "invite_rejected": "Uitnodiging afgewezen. Weet je zeker dat het juist is?",
-      "connecting_to_alias": "Connecting to {{alias}}",
-      "connected_to_alias": "Connected to {{alias}}",
-      "not_connected_to_alias": "{{alias}} is offline right now"
+      "connecting_to_alias": "Verbinding maken met {{alias}}",
+      "connected_to_alias": "Verbonden met {{alias}}",
+      "not_connected_to_alias": "{{alias}} is momenteel offline"
     },
     "dialogs": {
       "sign_in_with_ssb": {
         "client_initiated": {
-          "title": "Allow sign-in?",
+          "title": "Inloggen toestaan?",
           "description": "Open {{room}}'s website to create invite links and manage members. Do you want to use Manyverse to sign in?\n\nThe room's ID is {{roomid}}"
         },
         "server_initiated": {
@@ -440,11 +440,11 @@
         }
       },
       "manage_aliases": {
-        "label": "Manage my aliases",
-        "accessibility_label": "Manage my aliases in Room servers"
+        "label": "Mijn aliassen beheren",
+        "accessibility_label": "Mijn aliassen in kamerservers beheren"
       },
       "room_sign_in": {
-        "label": "Sign into website",
+        "label": "Log in op de website",
         "accessibility_label": "Open this room's website and sign into its dashboard, Button"
       },
       "room_share_invite": {
@@ -493,18 +493,18 @@
         "accessibility_label": "Publiceer reactieknop"
       },
       "preview": {
-        "label": "Preview",
+        "label": "Voorbeeldweergave",
         "accessibility_label": "Voorbeeld knop"
       },
       "close": {
         "accessibility_label": "Sluitknop"
       },
       "record_audio": {
-        "accessibility_label": "Record Audio Button",
+        "accessibility_label": "Audio opname knop",
         "permission_request": {
-          "title": "Allow Manyverse to record audio?",
-          "message": "Manyverse needs access to your microphone so you can compose audio messages",
-          "neutral": "Ask me later",
+          "title": "Sta Manyverse toe om audio op te nemen?",
+          "message": "Manyverse heeft toegang nodig tot je microfoon zodat je audioberichten kunt maken",
+          "neutral": "Vraag mij later",
           "positive": "Ok",
           "negative": "Annuleer"
         }
@@ -539,7 +539,7 @@
     }
   },
   "compose_audio": {
-    "title": "Audio message",
+    "title": "Audio bericht",
     "call_to_action": {
       "start_recording": {
         "accessibility_label": "Begin opname"
@@ -549,17 +549,17 @@
       },
       "discard_recording": {
         "label": "Weggooien",
-        "accessibility_label": "Discard Recording Button"
+        "accessibility_label": "Opname weggooien knop"
       },
       "submit_recording": {
         "label": "Voltooid",
-        "accessibility_label": "Submit Recording Button"
+        "accessibility_label": "Opname versturen knop"
       }
     },
     "dialogs": {
       "discard": {
         "title": "Audio bericht",
-        "question": "Discard draft?"
+        "question": "Concept verwijderen?"
       }
     }
   },
@@ -618,7 +618,7 @@
         "accessibility_label": "Toon Ontvangers"
       }
     },
-    "load_more": "Load more",
+    "load_more": "Meer laden",
     "notifications": {
       "new_conversation": "Dit is een nieuw privégesprek"
     }
@@ -659,22 +659,22 @@
       },
       "update": {
         "label": "Vernieuwen",
-        "accessibility_label": "Update app to latest version"
+        "accessibility_label": "Update de app naar de nieuwste versie"
       },
       "settings": {
         "label": "Instellingen",
         "accessibility_label": "Ga naar instellingen"
       },
       "preparing_database": {
-        "label": "Preparing database..."
+        "label": "Database voorbereiden..."
       },
       "ready_estimate": {
-        "label": "Ready:"
+        "label": "Gereed:"
       }
     },
     "dialogs": {
       "update": {
-        "title": "Check for new versions?",
+        "title": "Controleer op nieuwe versie?",
         "description": "Would you like Manyverse to automatically check for new releases?\n\nThis setting is optional and will allow Manyverse to send requests to the manyver.se website periodically."
       }
     }
@@ -688,7 +688,7 @@
     },
     "alert_unsupported_dht": {
       "title": "Niet ondersteund type",
-      "description": "P2P Invites are no longer supported in Manyverse."
+      "description": "P2P uitnodigingen worden niet langer ondersteund in Manyverse."
     },
     "text_field": {
       "accessibility_label": "Uitnodigingscode tekstinvoer"
@@ -706,7 +706,7 @@
     "call_to_action": {
       "copy_uri": "Copy SSB URI",
       "copy_cypherlink": "Kopieer cypherlink",
-      "private_chat": "Open private conversation",
+      "private_chat": "Start een privégesprek",
       "block": "Blokkeer",
       "block_secretly": "In het geheim blokkeren",
       "unblock": "Deblokkeer",
@@ -724,10 +724,10 @@
       "title": "SSB ID"
     },
     "dialog_manage_contact": {
-      "title": "Contact"
+      "title": "Contactpersoon"
     },
     "dialog_friend_request": {
-      "title": "Friend request",
+      "title": "Vriendschapsverzoek",
       "description": "This account is trying to connect with you, but Manyverse prevented it because they are outside your community.\n\nIf you recognize this ID, you can press \"Follow\" to allow them to connect with you."
     },
     "toast": {
@@ -738,11 +738,11 @@
         "accessibility_label": "SSB Identifier"
       },
       "biography": {
-        "accessibility_label": "Read Biography"
+        "accessibility_label": "Toon Biografie"
       },
       "counters": {
         "following": "Volgt",
-        "followers": "Followers"
+        "followers": "Volgers"
       }
     },
     "info": {
@@ -786,8 +786,8 @@
         "accessibility_label": "Profielafbeelding bewerken"
       },
       "register_new_alias": {
-        "label": "Register new alias",
-        "accessibility_label": "Register New Room Server Alias"
+        "label": "Registreer nieuwe alias",
+        "accessibility_label": "Registreer nieuwe kamerserver alias"
       }
     },
     "dialogs": {
@@ -801,7 +801,7 @@
     },
     "toasts": {
       "alias_removed_success": "Alias verwijderd",
-      "alias_removed_failure": "Failed to remove alias"
+      "alias_removed_failure": "Verwijderen alias mislukt"
     },
     "fields": {
       "name": {
@@ -813,18 +813,18 @@
         "accessibility_label": "Biografie tekstinvoer"
       },
       "aliases": {
-        "label": "Aliases"
+        "label": "Aliassen"
       }
     }
   },
   "manage_aliases": {
-    "title": "Manage aliases"
+    "title": "Aliassen beheren"
   },
   "register_alias": {
-    "title": "Register alias",
+    "title": "Registreer alias",
     "empty": {
       "no_servers": {
-        "title": "No servers",
+        "title": "Geen servers",
         "description": "To register an alias, you need to be a member of some SSB room server. Find one on the internet with the hashtag #ssbroom and make sure it supports aliases."
       }
     },
@@ -833,29 +833,29 @@
     },
     "dialogs": {
       "input_alias": {
-        "description": "Submit your desired new alias to {{host}} as a single word in lowercase.\n\nFor example, if you want the alias \"myname.{{host}}\", write \"myname\" below."
+        "description": "Dien je gewenste nieuwe alias in bij {{host}} als een enkel woord in kleine letters.\n\nBijvoorbeeld, als je de alias \"mijnnaam.{{host}}\" wil, schrijf dan \"mijnnaam\" hieronder."
       }
     },
     "submitting": {
-      "title": "Submitting..."
+      "title": "Versturen..."
     },
     "failure": {
-      "title": "It didn't work",
-      "alias_taken": "The alias you submitted is already taken by some user.",
+      "title": "Het werkte niet",
+      "alias_taken": "De alias die je hebt ingediend is al door een gebruiker in gebruik.",
       "call_to_action": {
         "try_again": {
-          "label": "Try again",
-          "accessibility_label": "Try Again Button"
+          "label": "Opnieuw proberen",
+          "accessibility_label": "Probeer Opnieuw Knop"
         }
       }
     },
     "success": {
-      "title": "Great!",
-      "description": "The alias {{alias}} is now yours.",
+      "title": "Geweldig!",
+      "description": "De alias {{alias}} is nu van jou.",
       "call_to_action": {
         "go_back": {
           "label": "Ga terug",
-          "accessibility_label": "Go Back Button"
+          "accessibility_label": "Ga terug Knop"
         }
       }
     }
@@ -902,20 +902,20 @@
   },
   "search": {
     "query_input": {
-      "placeholder": "Search public posts",
-      "accessibility_label": "Search Query Text Input"
+      "placeholder": "Doorzoek openbare posts",
+      "accessibility_label": "Zoekopdracht Tekst Invoer"
     },
     "clear_query": {
-      "accessibility_label": "Reset the Search Query Text Input"
+      "accessibility_label": "Reset de Zoekopdracht Tekst Invoer"
     },
     "empty": {
       "initial": {
-        "title": "Search something",
+        "title": "Zoek iets",
         "description": "Wacht terwijl de app\nprobeert verbinding te maken met je buren"
       },
       "zero_results": {
-        "title": "Zero results",
-        "description": "Nothing found for \"{{query}}\""
+        "title": "Nul resultaten",
+        "description": "Niets gevonden voor \"{{query}}\""
       }
     }
   },
@@ -1006,9 +1006,9 @@
         "accessibility_label": "Schuifbalk replicatiehops"
       },
       "enable_firewall": {
-        "title": "Enable firewall",
-        "subtitle": "Prevent strangers from creating network connections with me",
-        "accessibility_label": "Toggle enable firewall"
+        "title": "Firewall inschakelen",
+        "subtitle": "Voorkom dat vreemden netwerkverbindingen met mij maken",
+        "accessibility_label": "Firewall schakelaar"
       }
     },
     "data_and_storage": {
@@ -1060,18 +1060,18 @@
   },
   "resync": {
     "introduction": {
-      "title": "Good!",
+      "title": "Prima!",
       "description": {
-        "1_normal": "Your account's ",
-        "2_bold": "identity",
+        "1_normal": "Uw account hun ",
+        "2_bold": "identiteit",
         "3_normal": " is now restored.\n\nNow, to recover your ",
-        "4_bold": "data",
+        "4_bold": "gegevens",
         "5_normal": ", connect with friends that have interacted with you before, to redownload your data from them. There are two ways:"
       }
     },
     "buttons": {
-      "connect_via_wifi": "Connect via Wi-Fi",
-      "paste_invite": "Paste invite code"
+      "connect_via_wifi": "Verbinden via Wi-Fi",
+      "paste_invite": "Plak een uitnodigingscode"
     },
     "instructions": {
       "connect_via_wifi": {
@@ -1164,19 +1164,19 @@
     },
     "audio": {
       "play": {
-        "accessibility_label": "Play audio"
+        "accessibility_label": "Audio afspelen"
       },
       "pause": {
-        "accessibility_label": "Pause audio"
+        "accessibility_label": "Audio pauzeren"
       },
       "duration": {
-        "accessibility_label": "Audio duration"
+        "accessibility_label": "Audio duratie"
       },
       "elapsed": {
-        "accessibility_label": "Audio current time"
+        "accessibility_label": "Audio huidige tijd"
       },
       "slider": {
-        "accessibility_label": "Change audio time"
+        "accessibility_label": "Geluidstijd aanpassen"
       }
     },
     "content_warning": {
@@ -1249,13 +1249,13 @@
     }
   },
   "context_menu": {
-    "copy": "Copy",
-    "copy_link": "Copy link",
-    "cut": "Cut",
-    "inspect": "Inspect element",
-    "look_up_selection": "Look up {selection}",
-    "paste": "Paste",
-    "save_image": "Save image",
-    "save_image_as": "Save image as..."
+    "copy": "Kopiëren",
+    "copy_link": "Kopieer link",
+    "cut": "Knippen",
+    "inspect": "Element inspecteren",
+    "look_up_selection": "Zoek op {selection}",
+    "paste": "Plakken",
+    "save_image": "Afbeelding opslaan",
+    "save_image_as": "Afbeelding opslaan als..."
   }
 }
