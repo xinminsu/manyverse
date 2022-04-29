@@ -46,10 +46,10 @@ export default class GatheringMessage extends PureComponent<Props> {
           source: {uri: toUrl(content.image.link)},
           accessible: true,
           accessibilityRole: 'image',
-          accessibilityLabel:
-            this.props.title ??
-            t('message.image.without_caption.accessibility_label'),
-          style: [{width: 10, height: 10}],
+          accessibilityLabel: /* TODO use caption if available */ t(
+            'message.image.without_caption.accessibility_label',
+          ),
+          style: [{width: 100, height: 100}], // TODO find the right size
         })
       : null;
 
