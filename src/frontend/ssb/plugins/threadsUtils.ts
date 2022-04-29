@@ -23,6 +23,8 @@ import {
 } from '../types';
 import {imageToImageUrl, voteExpressionToReaction} from '../utils/from-ssb';
 import manifest from '../manifest';
+import {isGatheringMsg} from '~frontend/components/messages/Message';
+import xsFromCallback from 'xstream-from-callback';
 
 type SSB = ClientAPI<
   typeof manifest & {
@@ -47,7 +49,13 @@ function getRecipient(recp: string | Record<string, any>): string | undefined {
 
 function mutateMsgWithLiveExtras(ssb: SSB, includeReactions: boolean = true) {
   return async (msg: Msg, cb: Callback<MsgAndExtras>) => {
-    if (!isMsg(msg) || !msg.value) return cb(null, msg as any);
+    if (!(isMsg(msg) || isGatheringMsg(msg)) || !msg.value) {
+      return cb(null, msg as any);
+    }
+    let gatheringInfo;
+    if (isGatheringMsg(msg)) {
+      gatheringInfo = xsFromCallback(ssb.searchUtils.queryById)(msg.key);
+    }
 
     // Fetch name and image
     const id = msg.value.author;
@@ -73,6 +81,7 @@ function mutateMsgWithLiveExtras(ssb: SSB, includeReactions: boolean = true) {
     const m = msg as MsgAndExtras;
     m.value._$manyverse$metadata = m.value._$manyverse$metadata || {
       reactions,
+      gatheringInfo,
       about: {name, imageUrl},
     };
 
@@ -137,7 +146,7 @@ function mutatePrivateThreadWithLiveExtras(ssb: SSB) {
 }
 
 const ALLOW_POSTS = ['post'];
-const ALLOW_POSTS_AND_CONTACTS = ['post', 'contact'];
+const ALLOW_POSTS_AND_CONTACTS = ['post', 'contact', 'gathering'];
 
 const threadsUtils = {
   name: 'threadsUtils' as const,

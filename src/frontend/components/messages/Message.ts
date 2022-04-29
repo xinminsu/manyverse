@@ -7,7 +7,7 @@ import debounce from 'xstream/extra/debounce';
 import {PureComponent} from 'react';
 import {h} from '@cycle/react';
 import {withXstreamProps} from 'react-xstream-hoc';
-import {Msg, FeedId} from 'ssb-typescript';
+import {Msg, FeedId, GatheringContent, AboutContent} from 'ssb-typescript';
 import {isPostMsg, isContactMsg, isAboutMsg} from 'ssb-typescript/utils';
 import {
   Reactions,
@@ -20,6 +20,7 @@ import PostMessage from './PostMessage';
 import AboutMessage from './AboutMessage';
 import ContactMessage from './ContactMessage';
 import KeylessMessage from './KeylessMessage';
+import GatheringMessage from './GatheringMessage';
 
 export interface Props {
   msg: MsgAndExtras;
@@ -43,6 +44,16 @@ interface State {
 const RawMessage$ = withXstreamProps(RawMessage, 'reactions');
 const PostMessage$ = withXstreamProps(PostMessage, 'reactions');
 const ContactMessage$ = withXstreamProps(ContactMessage, 'reactions');
+const GatheringMessage$ = withXstreamProps(
+  GatheringMessage,
+  'reactions',
+  'gatheringInfo',
+);
+
+// TODO move this to ssb-typescript
+export function isGatheringMsg(msg: Msg<any>): msg is Msg<GatheringContent> {
+  return msg?.value?.content?.type === 'gathering';
+}
 
 export default class Message extends PureComponent<Props, State> {
   constructor(props: Props) {
@@ -61,6 +72,9 @@ export default class Message extends PureComponent<Props, State> {
     const reactions = (
       metadata.reactions ?? (xs.never() as Stream<Reactions>)
     ).compose(debounce(80)); // avoid DB reads flickering
+    const gatheringInfo = (
+      metadata.gatheringInfo ?? (xs.never() as Stream<Msg<AboutContent>[]>)
+    ).compose(debounce(80)); // avoid DB reads flickering
     const props = {
       ...this.props,
       msg: msg as Msg<any>,
@@ -73,6 +87,8 @@ export default class Message extends PureComponent<Props, State> {
 
     if (this.state.hasError) return h(RawMessage$, props);
     if (!msg.key) return h(KeylessMessage, props);
+    if (isGatheringMsg(msg))
+      return h(GatheringMessage$, {...props, gatheringInfo});
     if (isPostMsg(msg)) return h(PostMessage$, props);
     if (isAboutMsg(msg)) return h(AboutMessage, props);
     if (isContactMsg(msg)) return h(ContactMessage$, props);

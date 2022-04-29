@@ -1,4 +1,4 @@
-// SPDX-FileCopyrightText: 2021 The Manyverse Authors
+// SPDX-FileCopyrightText: 2021-2022 The Manyverse Authors
 //
 // SPDX-License-Identifier: MPL-2.0
 
@@ -9,10 +9,12 @@ const {
   where,
   and,
   type,
+  about,
   isPublic,
   descending,
   batch,
   toPullStream,
+  toCallback,
 } = require('ssb-db2/operators');
 
 export = {
@@ -20,16 +22,22 @@ export = {
   version: '1.0.0',
   manifest: {
     query: 'source',
+    queryById: 'async',
   },
   permissions: {
     master: {
-      allow: ['query'],
+      allow: ['query', 'queryById'],
     },
   },
   init: function init(ssb: any) {
     const containsWords = ssb.search2.operator;
 
     return {
+      // TODO find a better naming and better place to put this piece of code
+      queryById(msgId: string, cb: () => void) {
+        ssb.db.query(where(and(about(msgId), isPublic())), toCallback(cb));
+      },
+
       query(text: string) {
         return pull(
           ssb.db.query(

@@ -204,6 +204,7 @@ export default {
   },
   searchUtils: {
     query: 'source',
+    queryById: 'async',
   },
   settingsUtils: {
     read: 'sync',

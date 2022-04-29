@@ -2,7 +2,15 @@
 //
 // SPDX-License-Identifier: MPL-2.0
 
-import {Msg, Content, FeedId, About, MsgId, AliasContent} from 'ssb-typescript';
+import {
+  Msg,
+  Content,
+  FeedId,
+  About,
+  MsgId,
+  AliasContent,
+  AboutContent,
+} from 'ssb-typescript';
 import {Stream} from 'xstream';
 import {Peer as ConnQueryPeer} from 'ssb-conn-query/lib/types';
 
@@ -22,6 +30,7 @@ export interface PressReactionsEvent {
 export type MsgAndExtras<C = Content> = Msg<C> & {
   value: {
     _$manyverse$metadata: {
+      gatheringInfo?: Stream<NonNullable<Msg<AboutContent>[]>>;
       reactions?: Stream<NonNullable<Reactions>>;
       about: {
         name?: string;
