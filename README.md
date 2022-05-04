@@ -5,6 +5,7 @@ SPDX-License-Identifier: CC-BY-4.0
 -->
 
 # Manyverse
+fork from https://gitlab.com/staltz/manyverse
 
 **A social network off the grid** (Android)
 
