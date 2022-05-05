@@ -111,6 +111,13 @@ export default function view(state$: Stream<State>) {
               'settings.data_and_storage.blobs_storage.accessibility_label',
             ),
           }),
+          h(View, {style: styles.spacer}),
+          h(LinkSetting, {
+            sel: 'upload-ipfs',
+            title: 'upload to ipfs',
+            subtitle: 'save to web3.storage',
+            accessibilityLabel: 'web3.storage',
+          }),
         ]),
 
         h(View, {style: styles.section}, [

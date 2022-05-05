@@ -63,6 +63,8 @@ export default function intent(
 
     goToBackup$: screenSource.select('backup').events('press'),
 
+    goToIpfs$: screenSource.select('upload-ipfs').events('press'),
+
     goToLibraries$: screenSource.select('libraries').events('press'),
 
     goToThanks$: screenSource.select('thanks').events('press'),

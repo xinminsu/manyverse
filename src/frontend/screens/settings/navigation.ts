@@ -46,6 +46,19 @@ export default function navigationCommands(
       } as Command),
   );
 
+  const toIpfs$ = actions.goToIpfs$.map(
+    () =>
+      ({
+        type: 'push',
+        layout: {
+          component: {
+            name: Screens.Ipfs,
+            options: ipfsScreenNavOptions,
+          },
+        },
+      } as Command),
+  );
+
   const toLibraries$ = actions.goToLibraries$.map(
     () =>
       ({
