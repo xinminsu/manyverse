@@ -35,3 +35,6 @@ See file AUTHORS for copyright holders.
 https://gitcoin.co/issue/ipfs-and-filecoin/hackathons-bounties/6/100028834
 
 add IPFS storage support for manyverse app, which is a dapp in decentralized social.Now the storage capacity of manyverse is set by the user, and the content beyond this value will be deleted and not saved. This project provides one more option to save the extra information into the IPFS
+
+
+![截图 2022-05-05 15-41-04](https://user-images.githubusercontent.com/16698808/166881036-894ff3f8-d567-4df5-b756-a379549d42e5.png)
