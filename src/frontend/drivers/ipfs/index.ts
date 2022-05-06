@@ -1,4 +1,4 @@
-import process from 'process';
+/* import process from 'process';
 import minimist from 'minimist';
 import {Web3Storage, getFilesFromPath} from 'web3.storage';
 
@@ -28,3 +28,4 @@ export function saveToIpfs() {
   const cid = await storage.put(files);
   console.log('Content added with CID:', cid);
 }
+ */

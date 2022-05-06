@@ -46,7 +46,7 @@ export default function navigationCommands(
       } as Command),
   );
 
-  const toIpfs$ = actions.goToIpfs$.map(
+  /*   const toIpfs$ = actions.goToIpfs$.map(
     () =>
       ({
         type: 'push',
@@ -57,7 +57,7 @@ export default function navigationCommands(
           },
         },
       } as Command),
-  );
+  ); */
 
   const toLibraries$ = actions.goToLibraries$.map(
     () =>
