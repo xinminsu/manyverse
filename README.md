@@ -4,6 +4,9 @@ SPDX-FileCopyrightText: 2021-2022 The Manyverse Authors
 SPDX-License-Identifier: CC-BY-4.0
 -->
 
+nft related:
+https://github.com/xinminsu/nft_editor
+
 # Manyverse
 fork from https://gitlab.com/staltz/manyverse
 
