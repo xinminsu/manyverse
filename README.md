@@ -5,7 +5,7 @@ SPDX-License-Identifier: CC-BY-4.0
 -->
 
 nft related:
-https://github.com/xinminsu/nft_editor
+https://github.com/xinminsu/manyverse_ipfs
 
 # Manyverse
 fork from https://gitlab.com/staltz/manyverse
